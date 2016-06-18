@@ -2,12 +2,10 @@
     require_once '../model/Usuario.php';
 
     $primeiro_usuario = new Usuario();
-    $primeiro_usuario->nome = "Ricardo";
-    $primeiro_usuario->email = "ricardo@ricardo.com";
-    $primeiro_usuario->nascimento = "26/07/1991";
+    $primeiro_usuario->setNome('Ricardo');
+    $primeiro_usuario->setEmail('ricardo@ricardo.com');
     
+    echo $primeiro_usuario->getEmail();
+    echo $primeiro_usuario->getNome();
     
-    
-   $resultado_soma =  $primeiro_usuario->somar(2,2);
-   echo $resultado_soma;
 ?>

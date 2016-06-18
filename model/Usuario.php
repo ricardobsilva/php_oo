@@ -1,16 +1,28 @@
 <?php
+require_once 'Pessoa.php';
 
+class Usuario extends Pessoa  {
+    private $email;
+    private $nascimento;
+    
+    function getEmail() {
+        return $this->email;
+    }
 
-class Usuario {
-    public $email;
-    public $nome;
-    public $nascimento;
+    function getNascimento() {
+        return $this->nascimento;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
+    }
+
+    function setNascimento($nascimento) {
+        $this->nascimento = $nascimento;
+    }
 
         
-    public function somar($n1, $n2) {
-        return  $n1 + $n2;
-    } 
-    
+
     public function autenticar() {
         echo 'usuario autenticou no sistema';
     }
